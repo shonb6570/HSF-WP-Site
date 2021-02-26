@@ -1,17 +1,369 @@
-/* Error: unmatched "}".
- *     ,
- * 112 | } 
- *     | ^
- *     '
- *   scss\style.scss 112:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: unmatched "}".\a     \2577 \a 112 \2502  } \d\a     \2502  ^\a     \2575 \a   scss\\style.scss 112:1  root stylesheet';
+@charset "UTF-8";
+/* ============================================= */
+/*         Descriptive colors                    */
+/* ============================================= */
+/* ============================================= */
+/*         Base style colors                     */
+/* ============================================= */
+.main-blue {
+  background-color: #2182bf;
 }
+
+.main-light-blue {
+  background-color: #6b87f6;
+}
+
+.secondary-purple {
+  background-color: #4a0e99;
+}
+
+.secondary-light-purple {
+  background-color: #a792ff;
+}
+
+/* ============================================= */
+/*         Font stacks                           */
+/* ============================================= */
+/* ============================================= */
+/*         Font weights                          */
+/* ============================================= */
+html {
+  background-color: #f8f9fa;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.button {
+   display: inline-block;
+   padding: 0.35em 1.2em;
+   border: 0.1em solid #ffffff;
+   margin: 0 0.3em 0.3em 0;
+   border-radius: 0.12em;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   color: #ffffff;
+   text-align: center;
+   transition: all 0.2s;
+}
+
+.button:hover {
+   color: #000000;
+   background-color: #ffffff;
+}
+
+.nav-link {
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+}
+
+.headline {
+  padding-left: 20px;
+}
+
+.main-headline {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.members-headline-container {
+  border-right: 4px solid #a792ff;
+  height: 190px;
+}
+
+.nav-link,
+.card-text,
+.featured-member-text {
+  color: #1a1a1a;
+}
+
+.card-title {
+  font-family: "Fira Code", monospace;
+}
+
+.card-text {
+  font-family: "Heebo", sans-serif;
+}
+
+.members-headline,
+.main-headline,
+.event-headline,
+.training-headline {
+  color: #ffffff;
+  font-family: "Fira Code", monospace;
+}
+
+.members-headline,
+.training-headline,
+.event-headline {
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+
+.header {
+  height: 150px;
+  background-color: white;
+  padding: 0;
+}
+
+.logo {
+  height: 120px;
+}
+
+.nav-link:last-of-type {
+  padding-right: 0;
+}
+
+.hero-banner {
+  z-index: 1;
+  position: relative;
+  height: 100vh;
+}
+
+.main-headline-container {
+  border-left: 4px solid #a792ff;
+  height: 280px;
+  margin-top: 250px;
+  padding-left: 20px;
+}
+
+.hero-banner-img-container {
+  height: 600px;
+  z-index: 3;
+  margin-top: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-banner-img {
+  background-image: url("../images/hero-main-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  height: 750px;
+  width: 120%;
+  position: absolute;
+  left: -100px;
+  top: 0;
+}
+
+.background-el-three-fourths-screen {
+  height: 450px;
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: 200px;
+  border-top: 8px solid #344d5e;
+}
+
+.background-el-three-fourths-screen-bot-el-one {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 422px;
+  width: 93%;
+}
+
+.background-el-three-fourths-screen-bot-el-two {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 442px;
+  background-color: #a792ff;
+  width: 93%;
+}
+
+.right {
+  left: 7%;
+}
+
+.background-el-full {
+  height: 450px;
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: -60px;
+  border-top: 8px solid #344d5e;
+}
+
+.background-el-full-bot-el-one {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 422px;
+  left: 22%;
+  background-color: #a892ff96;
+  width: 78%;
+}
+
+.background-el-full-bot-el-two {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 442px;
+  left: 22%;
+  width: 78%;
+}
+
+.card {
+  margin: 100px 80px 0;
+}
+
+.card-body {
+  margin: 0 8%;
+}
+
+.event-icon {
+  height: 150px;
+  margin-top: -105px;
+}
+
+.background-el-small-left {
+  height: 450px;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 240px;
+  border-top: 8px solid #344d5e;
+}
+
+.background-el-small-left-bot-el-one {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 422px;
+  left: 22%;
+  background-color: #a892ff96;
+  width: 78%;
+}
+
+.background-el-small-left-bot-el-two {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 442px;
+  left: 22%;
+  background-color: #a892ff96;
+  width: 78%;
+}
+
+.background-el-small-right {
+  height: 450px;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  top: 1040px;
+  border-top: 8px solid #344d5e;
+}
+
+.background-el-small-right-bot-el-one {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 422px;
+  right: 22%;
+  background-color: #a892ff96;
+  width: 78%;
+}
+
+.background-el-small-right-bot-el-two {
+  height: 20px;
+  z-index: -1;
+  position: absolute;
+  top: 442px;
+  right: 22%;
+  background-color: #a892ff96;
+  width: 78%;
+}
+
+.jobs-icon {
+  height: 150px;
+  margin: -60px 0 20px;
+}
+
+.training-icon {
+  height: 150px;
+  margin: -60px 0 20px;
+}
+
+.training-section {
+  z-index: 1;
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.section {
+  z-index: 1;
+  position: relative;
+  height: 60vh;
+}
+
+.members-icon {
+  height: 150px;
+  margin: 140px 40px 20px 420px;
+}
+
+.member-icon-link {
+  height: 0;
+}
+
+.advert-section-container {
+  margin-top: 300px;
+  height: 30vh;
+}
+
+.featured-member-container,
+.classifieds-container {
+  border: 8px solid #2182bf;
+  padding: 10px;
+}
+
+.featured-member-container {
+  margin-right: 40px;
+}
+
+.classifieds-container {
+  margin-left: 40px;
+}
+
+.footer-border-space {
+  margin-top: 200px;
+  border-top: 6px solid #cccccc;
+  padding: 3px 0 0;
+}
+
+.footer {
+  position: relative;
+}
+
+.HSF_logo_footer {
+  position: absolute;
+  top: -101px;
+  left: 46.5%;
+}
+
+.logo_Dark {
+  height: 180px;
+}
+
+.footer-top-el {
+  background-color: #2182bf;
+  height: 200px;
+  padding-top: 130px;
+  color: #ffffff;
+}
+
+.footer-bot-el {
+  background-color: #1a1a1a;
+  height: 80px;
+}
+
+.social-link-icon {
+  margin: 3px 10px 0;
+  fill: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
