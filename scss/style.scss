@@ -1,3 +1,18 @@
+/*  Dev Log:
+	Nav-links are not displaying when collapsed. The id is correct, but it is not being pulled/dispalyed.
+	Something is missing...
+
+	Having issues styling the hero image.  It scales due to it being set in a column that is responsive.
+	It also has styling set on it as well. I am likely going wrong with both : /  
+	--> there must be a general way to set these banner images so that they responsive.  Should I use more 
+		one image (i.e. a mobile sized file, one for tablet, and one for desktop?)
+	
+	Both the hero and the card sections have multiple offsets, and col size properties set. I must be doing this incorrectly.
+	It seems foreced, and is only correct on certain screen sizes.  What is the correct way ot style a hero banner?
+
+	
+*/
+
 // ==========================================================================
 // Mixins
 // ==========================================================================
@@ -142,6 +157,10 @@ body,
 	font-weight: $font-semi-bold;
 }
 
+.footer-links {
+	color: $font-primary-color;
+}
+
 .headline {
 	padding-left: 20px;
 }
@@ -175,7 +194,9 @@ body,
 	font-family: $main-font;
 }
 
-.card-text {
+.card-text,
+.footer-info,
+.footer-links {
 	font-family: $secondary-font;
 }
 
@@ -300,9 +321,13 @@ nav,
 // card styles
 
 .event-headline {
+	margin-top: 40px;
+	border-right: 4px solid $Biloba-Flower;
+	padding-right: 20px;
 }
 
-.event-container {
+.event-title-icon-wrapper {
+	margin-top: -110px;
 }
 
 .background-el-full {
@@ -334,11 +359,11 @@ nav,
 
 .card {
 	margin-top: 100px;
+	max-width: 20rem;
 }
 
 .event-icon {
 	height: 150px;
-	margin-top: -105px;
 }
 
 // jobs and training section
@@ -497,8 +522,8 @@ nav,
 
 .footer-top-el {
 	background-color: $Curious-Blue;
-	height: 200px;
-	padding-top: 130px;
+	height: 100%;
+	padding-top: 110px;
 	color: $font-primary-color;
 }
 
@@ -510,4 +535,11 @@ nav,
 .social-link-icon {
 	margin: 3px 10px 0;
 	fill: $white;
+}
+
+.footer-links {
+	text-decoration: none;
+}
+.footer-item {
+	padding-bottom: 40px;
 }

@@ -1,3 +1,17 @@
+/*  Dev Log:
+	Nav-links are not displaying when collapsed. The id is correct, but it is not being pulled/dispalyed.
+	Something is missing...
+
+	Having issues styling the hero image.  It scales due to it being set in a column that is responsive.
+	It also has styling set on it as well. I am likely going wrong with both : /  
+	--> there must be a general way to set these banner images so that they responsive.  Should I use more 
+		one image (i.e. a mobile sized file, one for tablet, and one for desktop?)
+
+	Both the hero and the card sections have multiple offsets, and col size properties set. I must be doing this incorrectly.
+	It seems foreced, and is only correct on certain screen sizes.  What is the correct way ot style a hero banner?
+
+
+*/
 /* ============================================= */
 /*         Descriptive colors                    */
 /* ============================================= */
@@ -57,6 +71,10 @@ body,
   font-weight: 600;
 }
 
+.footer-links {
+  color: #ffffff;
+}
+
 .headline {
   padding-left: 20px;
 }
@@ -96,7 +114,9 @@ body,
   font-family: "Fira Code", monospace;
 }
 
-.card-text {
+.card-text,
+.footer-info,
+.footer-links {
   font-family: "Heebo", sans-serif;
 }
 
@@ -225,6 +245,16 @@ nav,
   left: 7%;
 }
 
+.event-headline {
+  margin-top: 40px;
+  border-right: 4px solid #a792ff;
+  padding-right: 20px;
+}
+
+.event-title-icon-wrapper {
+  margin-top: -110px;
+}
+
 .background-el-full {
   height: 450px;
   z-index: -2;
@@ -255,11 +285,11 @@ nav,
 
 .card {
   margin-top: 100px;
+  max-width: 20rem;
 }
 
 .event-icon {
   height: 150px;
-  margin-top: -105px;
 }
 
 .jobs-img-container {
@@ -413,8 +443,8 @@ nav,
 
 .footer-top-el {
   background-color: #2182bf;
-  height: 200px;
-  padding-top: 130px;
+  height: 100%;
+  padding-top: 110px;
   color: #ffffff;
 }
 
@@ -426,6 +456,14 @@ nav,
 .social-link-icon {
   margin: 3px 10px 0;
   fill: #ffffff;
+}
+
+.footer-links {
+  text-decoration: none;
+}
+
+.footer-item {
+  padding-bottom: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
