@@ -38,45 +38,68 @@
 			</p>
 		<![endif]-->
 
-		<header
-			class="container-fluid header sticky-top d-flex justify-content-around"
-			id="header"
-		>
-			<div>
-				<a href="#"
-					><img class="logo" src="./images/HSF_Logo_Light.png" alt="HSF logo"
-				/></a>
-			</div>
-			<ul class="nav nav-link-ulpt-3">
-				<div class="d-flex align-self-center">
-					<li class="nav-item">
-						<a class="nav-link" href="#">ABOUT</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">EVENTS</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">COMMUNITY CALENDAR</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">BUSINESS PARNTERS</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">JOBS</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">MEMBERS</a>
-					</li>
+		<header class="container-fluid header sticky-top" id="header">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<div>
+						<a href="#"
+							><img
+								class="logo"
+								src="./images/HSF_Logo_Light.png"
+								alt="HSF logo"
+						/></a>
+					</div>
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div
+						class="collapse navbar-collapse justify-content-end"
+						id="navbarNavDropdown"
+					>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">ABOUT</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">EVENTS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">COMMUNITY CALENDAR</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">BUSINESS PARNTERS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">JOBS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">MEMBERS</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</ul>
+			</nav>
 		</header>
 
 		<main>
 			<!-- hero banner -->
 			<div class="container-fluid bg-light hero-banner">
-				<div class="container row">
-					<div class="container offset-xl-5 d-flex">
-						<div class="col-xl-7 container main-headline-container">
+				<div class="row">
+					<div class="col-12 px-0"></div>
+						<!-- main-headline-container -->
+						<div
+							class="offset-xl-3 col-xl-4 col-xxl-6 offset-sm-1 col-sm-6 col-12 main-headline-container"
+						>
 							<h1 class="headline main-headline">
 								Improving lives <br />
 								by providing networking <br />
@@ -86,13 +109,12 @@
 							</h1>
 						</div>
 
-						<div class="col-xl-7 hero-banner-img-container">
-							<div class="hero-banner-img"></div>
-						</div>
-
 						<div
-							class="col-xl-10 offset-xl-2 d-flex background-el-three-fourths-screen main-blue"
+							class="col-xl-10 offset-xl-2 col-sm-11 offset-sm-1 col-12 background-el-three-fourths-screen main-blue"
 						>
+							<div class="offset-xl-6 offset-lg-4 offset-md-5 col-md-6 hero-banner-img-container">
+								<div class="hero-banner-img"></div>
+							</div>
 							<div
 								class="d-flex background-el-three-fourths-screen-bot-el-one main-light-blue right"
 							></div>
@@ -100,92 +122,108 @@
 								class="d-flex background-el-three-fourths-screen-bot-el-two right"
 							></div>
 						</div>
+						<!-- /main-headline-container -->
 					</div>
+					<!-- /col -->
 				</div>
+				<!-- /row -->
 			</div>
 			<!-- /hero banner -->
 
 			<!-- event card section -->
-			<div class="container-fluid bg-light section">
-				<div class="container-fluid row">
-					<!-- Events headline  -->
-					<div class="col-xl-7 container d-flex justify-content-end">
-						<h1 class="headline event-headline">Lorem ipsum dolor sit amet</h1>
-						<a href="#">
-							<img
-								class="event-icon"
-								src="./images/Calendar-icon.png"
-								alt="Events icon"
-							/>
-						</a>
-					</div>
-					<!-- /Events headline  -->
+			<div class="row bg-light section">
+				<!-- event container -->
+				<div class="event-container">
+				<!-- Events headline  -->
+				<div class="event-headline-container">
+					<h1 class="event-headline">Lorem ipsum dolor sit amet</h1>
+					<a href="#">
+						<img
+							class="event-icon"
+							src="./images/Calendar-icon.png"
+							alt="Events icon"
+						/>
+					</a>
+				</div>
+				<!-- /Events headline  -->
 
-					<!-- Event card container -->
-					<div class="d-flex justify-content-center">
-						<div class="card" style="width: 18rem">
-							<img
-								class="card-img-top"
-								src="./images/krakenimages-376KN_ISplE-unsplash.jpg"
-								alt="Card image cap"
-							/>
-							<div class="card-body">
-								<h5 class="card-title">Lorem ipsum</h5>
-								<p class="card-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolor magna aliqua.
-								</p>
-								<a href="#">
-									<button type="button" class="btn btn-outline-primary">
-										Read More
-									</button>
-								</a>
+				<!-- card 1 -->
+				<div class="row offset-lg-3 col-lg-9 col-10 offset-1">
+						<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-12">
+							<div class="card"">
+								<img
+									class="card-img-top"
+									src="./images/krakenimages-376KN_ISplE-unsplash.jpg"
+									alt="Card image cap"
+								/>
+								<div class="card-body">
+									<h5 class="card-title">Lorem ipsum</h5>
+									<p class="card-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod tempor incididunt ut labore et dolor magna aliqua.
+									</p>
+									<a href="#">
+										<button type="button" class="button">
+											Read More
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
+						<!-- /card 1 -->
 
-						<div class="card" style="width: 18rem">
-							<img
-								class="card-img-top"
-								src="./images/krakenimages-376KN_ISplE-unsplash.jpg"
-								alt="Card image cap"
-							/>
-							<div class="card-body">
-								<h5 class="card-title">Lorem ipsum</h5>
-								<p class="card-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolor magna aliqua.
-								</p>
-								<a href="#">
-									<button type="button" class="btn btn-outline-primary">
-										Read More
-									</button>
-								</a>
+						<!-- card 2 -->
+						<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-12">
+							<div class="card">
+								<img
+									class="card-img-top"
+									src="./images/krakenimages-376KN_ISplE-unsplash.jpg"
+									alt="Card image cap"
+								/>
+								<div class="card-body">
+									<h5 class="card-title">Lorem ipsum</h5>
+									<p class="card-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod tempor incididunt ut labore et dolor magna aliqua.
+									</p>
+									<a href="#">
+										<button type="button" class="button">
+											Read More
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
+						<!-- card 2 -->
 
-						<div class="card" style="width: 18rem">
-							<img
-								class="card-img-top"
-								src="./images/krakenimages-376KN_ISplE-unsplash.jpg"
-								alt="Card image cap"
-							/>
-							<div class="card-body">
-								<h5 class="card-title">Lorem ipsum</h5>
-								<p class="card-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolor magna aliqua.
-								</p>
-								<a href="#">
-									<button type="button" class="btn btn-outline-primary">
-										Read More
-									</button>
-								</a>
+						<!-- card 3 -->
+						<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-12">
+							<div class="card">
+								<img
+									class="card-img-top"
+									src="./images/krakenimages-376KN_ISplE-unsplash.jpg"
+									alt="Card image cap"
+								/>
+								<div class="card-body">
+									<h5 class="card-title">Lorem ipsum</h5>
+									<p class="card-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod tempor incididunt ut labore et dolor magna aliqua.
+									</p>
+									<a href="#">
+										<button type="button" class="button">
+											Read More
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- /Event card container -->
+						<!-- card 3 -->
+				</div>
+			</div>
+			<!-- /Event card container -->
 
-					<div class="col-xl-12 d-flex background-el-full main-light-blue">
+			<div class="col-xl-12 d-flex background-el-full main-light-blue">
 						<div class="col-xl-8">
 							<div class="d-flex background-el-full-bot-el-one"></div>
 							<div class="d-flex background-el-full-bot-el-two main-blue"></div>
@@ -196,20 +234,20 @@
 			<!-- /Event card section -->
 
 			<!-- Training and Jobs Section -->
+			<!-- 
+			<div class="bg-light training-section"> -->
+			<!-- training row -->
+			<!-- <div class="row">
+					<div class="container">
+						<div class="col-xl-5 offset-xl-6 col-12 jobs-img-container">
+							<div class="jobs-img"></div>
+						</div> -->
 
-			<div class="container bg-light training-section">
-				<!-- training row -->
-				<div class="container row">
-					<div class="container offset-xl-4 d-flex">
-						<div class="col-xl-5 offset-xl-1 hero-banner-img-container">
-							<div class="hero-banner-img"></div>
-						</div>
+			<!-- Training element  -->
 
-						<!-- Training element  -->
+			<!-- <div class="col-xl-6 d-flex background-el-small-left main-blue">
 
-						<div class="col-xl-6 d-flex background-el-small-left main-blue">
-
-							<div class="col-xl-10 offset-xl-2 container d-flex">
+							<div class="col-xl-10 offset-xl-2 container">
 								<div class="flex-column">
 									<a href="#">
 										<img
@@ -240,22 +278,22 @@
 							<div
 								class="d-flex background-el-small-left-bot-el-two"
 							></div>
-						</div>
-						<!-- training element -->
-					</div>
-				</div>
-				<!-- training row -->
+						</div> -->
+			<!-- training element -->
+			<!-- </div>
+				</div> -->
+			<!-- training row -->
 
-				<!-- jobs row -->
-				<div class="container row">
+			<!-- jobs row -->
+			<!-- <div class="container row">
 					<div class="container offset-xl-2 d-flex">  
 						<div class="col-xl-5 hero-banner-img-container">
 							<div class="hero-banner-img"></div>
-						</div>
+						</div> -->
 
-						<!-- jobs element  -->
+			<!-- jobs element  -->
 
-						<div class="col-xl-6 d-flex background-el-small-right main-blue">
+			<!-- <div class="col-xl-6 d-flex background-el-small-right main-blue">
 
 							<div class="col-xl-10 offset-xl-2 container d-flex">
 								<div class="flex-column">
@@ -288,27 +326,27 @@
 							<div
 								class="d-flex background-el-small-right-bot-el-two"
 							></div>
-						</div>
-						<!-- jobs element -->
+						</div> -->
+			<!-- jobs element -->
 
-					</div>
-				</div>
-				<!-- /jobs row -->
+			<!-- </div>
+				</div> -->
+			<!-- /jobs row -->
 
-			</div>
+			<!-- </div> -->
 			<!-- /Training and Jobs Section -->
 
 			<!-- Membership section -->
-			<div class="container-fluid bg-light section">
+			<!-- <div class="container-fluid bg-light section">
 				<div class="container row">
-					<div class="container offset-xl-5 d-flex">
+					<div class="container d-flex">
 						<div class="col-xl-5 hero-banner-img-container">
 							<div class="hero-banner-img"></div>
-						</div>
+						</div> -->
 
-						<!-- Membership headline  -->
-						<div
-							class="col-xl-6 offset-xl-3 container d-flex justify-content-end"
+			<!-- Membership headline  -->
+			<!-- <div
+							class="col-xl-6 container"
 						>
 							<div class="flex-column">
 								<a href="#" class="member-icon-link">
@@ -328,10 +366,10 @@
 
 							</div>
 
-						</div>
-						<!-- /Membership headline  -->
+						</div> -->
+			<!-- /Membership headline  -->
 
-						<div
+			<!-- <div
 							class="col-xl-10 d-flex background-el-three-fourths-screen main-blue"
 						>
 							<div
@@ -343,14 +381,14 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- /Membership section  -->
 
 			<!-- advert section -->
 
-			<div class="container-fluid bg-light advert-section-container">
-				<!-- headline -->
-				<div class="row d-flex justify-content-center">
+			<!-- <div class="container-fluid bg-light advert-section-container"> -->
+			<!-- headline -->
+			<!-- <div class="row d-flex justify-content-center">
 					<div class="col-xl-1 flex-row">
 						<hr />
 					</div>
@@ -370,10 +408,10 @@
 						<hr />
 					</div>
 				</div>
-				<div class="row d-flex justify-content-center">
-					<!-- featrued members element -->
+				<div class="row d-flex justify-content-center"> -->
+			<!-- featrued members element -->
 
-					<div class="col-xl-3 featured-member-container d-flex flex-row">
+			<!-- <div class="col-xl-3 featured-member-container d-flex flex-row">
 						<div class="d-flex flex-column col-xl-6">
 							<div>
 								<img
@@ -398,10 +436,10 @@
 								<a href="#"><span>Read More</span></a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
-					<!-- classifieds advert element -->
-					<div class="col-xl-3 featured-member-container d-flex flex-row">
+			<!-- classifieds advert element -->
+			<!-- <div class="col-xl-3 featured-member-container d-flex flex-row">
 						<div class="d-flex flex-column col-xl-6">
 							<div>
 								<img
@@ -426,9 +464,9 @@
 								<a href="#"><span>Read More</span></a>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+					</div> -->
+			<!-- </div> -->
+			<!-- </div> -->
 
 			<!-- /advert section -->
 		</main>
