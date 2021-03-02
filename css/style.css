@@ -1,4 +1,7 @@
 /*  Dev Log:
+
+	there is a small margin being created on the hero (padding-right, I believe, on the hero banner) .
+
 	Nav-links are not displaying when collapsed. The id is correct, but it is not being pulled/dispalyed.
 	Something is missing...
 
