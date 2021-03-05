@@ -23,19 +23,27 @@
 //Media queries
 
 @mixin for-size($size) {
-	@if $size == phone {
-		@media (max-width: 599px) {
+	@if $size == tablet {
+		@media (min-width: 576px) {
 			@content;
 		}
-	} @else if $size == tablet {
-		@media (min-width: 600px) {
+	} @else if $size == tablet_lg {
+		@media (min-width: 768px) {
 			@content;
 		}
 	} @else if $size == desktop {
-		@media (min-width: 1200px) {
+		@media (min-width: 992px) {
 			@content;
 		}
 	} @else if $size == desktop_lg {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else if $size == desktop_xlg {
+		@media (min-width: 1400px) {
+			@content;
+		}
+	} @else if $size == desktop_xxlg {
 		@media (min-width: 1800px) {
 			@content;
 		}
@@ -69,14 +77,6 @@ $background-off-white: #f8f9fa;
 /* ============================================= */
 /*         Base style colors                     */
 /* ============================================= */
-
-.main-blue {
-	background-color: $Curious-Blue;
-}
-
-.main-light-blue {
-	background-color: $Cornflower-Blue;
-}
 
 .secondary-purple {
 	background-color: $Indigo;
@@ -146,12 +146,6 @@ body,
 .button:hover {
 	background-color: $Curious-Blue;
 }
-// @media all and (max-width:30em){
-//  a.button1{
-//   display:block;
-//   margin:0.4em auto;
-//	 }
-// }
 
 //typography
 
@@ -164,27 +158,23 @@ body,
 	color: $font-primary-color;
 }
 
-.headline {
-	padding-left: 20px;
-}
-
 .main-headline {
 	font-weight: $font-bold;
-	font-size: 1.5rem;
+	font-size: 2rem;
+
 	@include for-size(tablet) {
 		font-size: 1.8rem;
 	}
+
+	@include for-size(tablet_lg) {
+		font-size: 1.6rem;
+	}
 	@include for-size(desktop) {
+		font-size: 1.8rem;
+	}
+	@include for-size(desktop_xlg) {
 		font-size: 2rem;
 	}
-	@include for-size(desktop_lg) {
-		font-size: 2.5rem;
-	}
-}
-
-.members-headline-container {
-	border-right: 4px solid $Biloba-Flower;
-	height: 190px;
 }
 
 .nav-link,
@@ -205,22 +195,27 @@ body,
 
 .members-headline,
 .main-headline,
-.event-headline,
+.event-headline h2,
 .training-headline {
 	color: $font-primary-color;
 	font-family: $main-font;
 }
 
 .members-headline,
+.event-headline h2,
+.training-headline {
+	font-size: 2.2rem;
+}
+
+.members-headline,
 .training-headline,
-.event-headline {
+.event-headline h2 {
 	font-weight: $font-regular;
-	font-size: 2.25rem;
 }
 
 //headers styles
 
-nav,
+.navbar,
 .header {
 	background-color: $white;
 }
@@ -242,262 +237,278 @@ nav,
 
 //hero styles
 
-.hero-banner {
+.hero-banner-section {
 	z-index: 1;
 	position: relative;
 	height: 100vh;
-	padding: 0;
 }
 
 .main-headline-container {
 	border-left: 4px solid $Biloba-Flower;
 	height: 100%;
-	margin-top: 250px;
-	padding-left: 20px;
-	@include for-size(phone) {
-		margin-top: 220px;
+	margin-top: 50px;
+	max-width: 400px;
+	@include for-size(tablet) {
+		max-width: 460px;
 	}
-}
-
-.hero-banner-img-container {
-	height: 600px;
-	z-index: 3;
-	margin-top: -60px;
-	overflow: hidden;
-	position: relative;
-	@include for-size(phone) {
-		margin: 180px 20px 0 20px;
-		height: 440px;
+	@include for-size(tablet_lg) {
+		margin-top: 140px;
+		max-width: 285px;
 	}
 	@include for-size(desktop) {
-		width: 500px;
+		margin-top: 240px;
+		max-width: 100%;
 	}
-	@include for-size(desktop_lg) {
-		width: 800px;
+	@include for-size(desktop_xlg) {
+		margin-top: 240px;
+		max-width: 480px;
 	}
 }
 
 .hero-banner-img {
 	background-image: url('../images/hero-main-img.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	z-index: 3;
-	height: 750px;
-	width: 120%;
+	width: 100%;
+	height: 400px;
 	position: absolute;
-	left: -100px;
-	top: 0;
-	@include for-size(phone) {
-		height: 550px;
+	top: 360px;
+	@include for-size(tablet) {
+		top: 330px;
+		height: 340px;
+	}
+	@include for-size(tablet_lg) {
+		top: 60px;
+		height: 340px;
+	}
+	@include for-size(desktop) {
+		height: 400px;
+		top: 160px;
+	}
+	@include for-size(desktop_lg) {
+		height: 520px;
+		top: 140px;
 	}
 }
 
 .background-el-three-fourths-screen {
-	height: 450px;
+	height: 760px;
 	z-index: -2;
 	position: absolute;
 	left: 0;
-	top: 200px;
-	border-top: 8px solid $Cello;
+	top: 0px;
+	background-color: $Curious-Blue;
+	@include for-size(tablet) {
+		height: 710px;
+	}
+	@include for-size(tablet_lg) {
+		top: 100px;
+		border-top: 8px solid $Cello;
+		height: 340px;
+	}
+	@include for-size(desktop) {
+		top: 200px;
+		height: 400px;
+	}
 }
 
 .background-el-three-fourths-screen-bot-el-one {
 	height: 20px;
 	z-index: -1;
 	position: absolute;
-	top: 422px;
-	width: 93%;
+	top: 740px;
+	background-color: $Cornflower-Blue;
+	@include for-size(tablet) {
+		top: 690px;
+	}
+	@include for-size(tablet_lg) {
+		top: 420px;
+	}
+	@include for-size(desktop) {
+		top: 580px;
+	}
 }
+
 .background-el-three-fourths-screen-bot-el-two {
 	height: 20px;
 	z-index: -1;
 	position: absolute;
-	top: 442px;
+	top: 760px;
 	background-color: $Biloba-Flower;
-	width: 93%;
-}
-
-.right {
-	left: 7%;
+	@include for-size(tablet) {
+		top: 710px;
+	}
+	@include for-size(tablet_lg) {
+		top: 440px;
+	}
+	@include for-size(desktop) {
+		top: 600px;
+	}
 }
 
 // card styles
 
-.event-headline {
-	margin-top: 40px;
-	border-right: 4px solid $Biloba-Flower;
-	padding-right: 20px;
+.event-icon {
+	height: 150px;
+	z-index: 3;
+}
+.event-icon-container {
+	z-index: 3;
+	margin-top: -50px;
 }
 
-.event-title-icon-wrapper {
-	margin-top: -110px;
+.event-headline-row {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	@include for-size(tablet) {
+		margin-bottom: 20px;
+	}
+}
+.event-headline h2 {
+	border-left: 4px solid $Biloba-Flower;
+	padding-left: 10px;
+	margin-top: 20px;
+	@include for-size(tablet_lg) {
+		min-width: auto;
+		border-right: 4px solid $Biloba-Flower;
+		border-left: none;
+		padding-left: 0px;
+		padding-right: 10px;
+	}
 }
 
-.background-el-full {
-	height: 450px;
-	z-index: -2;
-	position: absolute;
-	left: 0;
-	top: -60px;
-	border-top: 8px solid $Cello;
-}
-
-.background-el-full-bot-el-one {
-	height: 20px;
-	z-index: -1;
-	position: absolute;
-	top: 422px;
-	left: 22%;
-	background-color: $Biloba-Flower-Washed;
-	width: 78%;
-}
-.background-el-full-bot-el-two {
-	height: 20px;
-	z-index: -1;
-	position: absolute;
-	top: 442px;
-	left: 22%;
-	width: 78%;
+.card-deck,
+.card {
+	z-index: 4;
 }
 
 .card {
-	margin-top: 100px;
-	max-width: 20rem;
+	min-width: 350px;
+	margin-top: 60px;
+	@include for-size(tablet) {
+		min-width: 300px;
+	}
+	@include for-size(tablet_lg) {
+		min-width: auto;
+	}
+	@include for-size(desktop) {
+		min-width: 280px;
+	}
+	@include for-size(desktop_lg) {
+		min-width: auto;
+	}
 }
 
-.event-icon {
-	height: 150px;
+.background-el-full {
+	height: 100%;
+	border-top: 8px solid $Cello;
+	background-color: $Cornflower-Blue;
+	z-index: 1;
+	padding-bottom: 80px;
+}
+
+.background-el-full-bot-el-one {
+	margin-top: -20px;
+	height: 20px;
+	background-color: $Curious-Blue_Washed;
+	z-index: 1;
+}
+.background-el-full-bot-el-two {
+	height: 20px;
+	background-color: $Curious-Blue;
+	z-index: 1;
 }
 
 // jobs and training section
 
-.jobs-img-container {
-	height: 600px;
-	z-index: 3;
-	margin-top: 180px;
-	overflow: hidden;
-	position: relative;
+// membership section
+
+.members-section {
+	margin-top: 200px;
+	margin-bottom: 400px;
 }
 
-.jobs-img {
-	background-image: url('../images/hero-main-img.jpg');
+.members-headline-container {
+	margin-top: 60px;
+	z-index: 2;
+}
+
+.members-headline {
+	border-left: 4px solid $Biloba-Flower;
+	font-size: 2rem;
+	padding-left: 10px;
+}
+
+.membership-img {
+	background-image: url('../images/members-photo-60.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
-	z-index: 3;
-	height: 750px;
-	width: 120%;
+	background-size: contain;
 	position: absolute;
-	left: -100px;
-	top: 0;
-}
-
-.background-el-small-left {
-	height: 450px;
-	z-index: 3;
-	position: absolute;
-	left: 0;
-	top: 240px;
-	border-top: 8px solid $Cello;
-}
-.background-el-small-left-bot-el-one {
-	height: 20px;
-	z-index: -1;
-	position: absolute;
-	top: 422px;
-	left: 22%;
-	background-color: $Biloba-Flower-Washed;
-	width: 78%;
-}
-.background-el-small-left-bot-el-two {
-	height: 20px;
-	z-index: -1;
-	position: absolute;
-	top: 442px;
-	left: 22%;
-	background-color: $Biloba-Flower-Washed;
-	width: 78%;
-}
-
-.background-el-small-right {
-	height: 450px;
-	z-index: 3;
-	position: absolute;
-	right: 0;
-	top: 1040px;
-	border-top: 8px solid $Cello;
-}
-.background-el-small-right-bot-el-one {
-	height: 20px;
-	z-index: -1;
-	position: absolute;
-	top: 422px;
-	right: 22%;
-	background-color: $Biloba-Flower-Washed;
-	width: 78%;
-}
-.background-el-small-right-bot-el-two {
-	height: 20px;
-	z-index: -1;
-	position: absolute;
-	top: 442px;
-	right: 22%;
-	background-color: $Biloba-Flower-Washed;
-	width: 78%;
-}
-
-.jobs-icon {
-	height: 150px;
-	margin: -60px 0 20px;
-}
-
-.training-icon {
-	height: 150px;
-	margin: -60px 0 20px;
-}
-
-.training-section {
 	z-index: 1;
+	width: 380px;
+	height: 400px;
+	left: 55px;
+	top: 270px;
+	@include for-size(tablet) {
+		width: 440px;
+		height: 480px;
+		top: 260px;
+	}
+	@include for-size(tablet_lg) {
+		height: 520px;
+		width: 400px;
+		left: 2%;
+		top: 20px;
+	}
+	@include for-size(desktop) {
+		height: 580px;
+		width: 500px;
+		left: 10%;
+		top: -60px;
+	}
+	@include for-size(desktop_lg) {
+		left: 15%;
+		height: 620px;
+		width: 540px;
+	}
+	@include for-size(desktop_xxlg) {
+		left: 20%;
+		height: 620px;
+		width: 540px;
+	}
+	@include for-size(desktop_xxlg) {
+		left: 30%;
+		height: 620px;
+		width: 540px;
+	}
+}
+
+.background-el-three-fourths-screen-left {
+	border-top: 8px solid $Cello;
+	height: 700px;
+	background-color: $Curious-Blue;
 	position: relative;
-	margin-bottom: 200px;
+	@include for-size(tablet) {
+		height: 640px;
+	}
+	@include for-size(tablet_lg) {
+		height: 420px;
+	}
 }
 
-// membership styles
-
-.section {
-	z-index: 1;
-	position: relative;
-	height: 100%;
+.background-el-three-fourths-screen-left-bot-el-one {
+	margin-top: -20px;
+	height: 20px;
+	background-color: $Cornflower-Blue;
 }
 
-.members-icon {
-	height: 150px;
-	margin: 140px 40px 20px 420px;
-}
-
-.member-icon-link {
-	height: 0;
+.background-el-three-fourths-screen-left-bot-el-two {
+	height: 20px;
+	background-color: $Biloba-Flower;
 }
 
 //advertisement section
-
-.advert-section-container {
-	margin-top: 300px;
-	height: 30vh;
-}
-
-.featured-member-container,
-.classifieds-container {
-	border: 8px solid $Curious-Blue;
-	padding: 10px;
-}
-
-.featured-member-container {
-	margin-right: 40px;
-}
-
-.classifieds-container {
-	margin-left: 40px;
-}
 
 // footer
 
