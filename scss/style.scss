@@ -61,12 +61,13 @@
 $Curious-Blue: #2182bf;
 $Curious-Blue_Washed: #2182bf85;
 $Indigo: #4a0e99;
+$Indigo-washed: #4a0e9962;
 $Royal-Blue: #4f60e5;
 $Royal-Blue_Washed: #4f61e57c;
 $Cornflower-Blue: #6b87f6;
 $Cornflower-Blue_Washed: #6b87f6b9;
 $Biloba-Flower: #a792ff;
-$Biloba-Flower_Washed: #a892ff96;
+$Biloba-Flower_Washed: #a892ff71;
 $Cod-Grey: #1a1a1a;
 $Cello: #344d5e;
 $Dim-Grey: #707070;
@@ -78,27 +79,8 @@ $background-off-white: #f8f9fa;
 /*         Base style colors                     */
 /* ============================================= */
 
-.secondary-purple {
-	background-color: $Indigo;
-}
-
-.secondary-light-purple {
-	background-color: $Biloba-Flower;
-}
-
 $font-primary-color: $white;
 $font-secondary-color: $Cod-Grey;
-
-//border
-//$border-color-light: $nobel;
-
-//hover
-//$hover-glow: $blue-stone;
-
-//font
-// $font-main-color: $tundora;
-// $font-secondary-color: $wild-dove;
-// $font-modal: $mine-shaft-opaque;
 
 /* ============================================= */
 /*         Font stacks                           */
@@ -123,23 +105,29 @@ $font-bold: 700;
 //base styles
 
 html,
-body,
-.header {
+body {
 	background-color: $background-off-white;
 }
 
 .button {
+	background-color: $white;
+	color: $font-secondary-color;
+}
+
+.button-alt {
+	color: $font-primary-color;
+	background-color: transparent;
+}
+
+.button,
+.button-alt {
+	font-weight: $font-medium;
 	display: inline-block;
 	padding: 0.35em 1.2em;
-	border: 4px solid $Curious-Blue;
 	margin: 0 0.3em 0.3em 0;
 	border-radius: 0.12em;
 	box-sizing: border-box;
 	text-decoration: none;
-	font-family: $main-font;
-	font-weight: $font-medium;
-	color: $font-secondary-color;
-	background-color: $white;
 	text-align: center;
 	transition: all 0.2s;
 }
@@ -147,20 +135,6 @@ body,
 	background-color: $Curious-Blue;
 }
 
-.button-alt {
-	display: inline-block;
-	padding: 0.35em 1.2em;
-	border: 4px solid $white;
-	margin: 0 0.3em 0.3em 0;
-	border-radius: 0.12em;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family: $main-font;
-	font-weight: $font-medium;
-	color: $font-primary-color;
-	text-align: center;
-	transition: all 0.2s;
-}
 .button-alt:hover {
 	background-color: $white;
 	color: $font-secondary-color;
@@ -171,42 +145,72 @@ body,
 	border-top: 8px solid $Cello;
 }
 
-//typography
+.border-primary-color {
+	border: 4px solid $Curious-Blue;
+}
 
-//hero banner bg color
+.border-white {
+	border: 4px solid $Curious-Blue;
+}
+
+.navbar,
+.header {
+	background-color: $white;
+}
+
+/* hero banner bg color - main element
+event card bg color - second bottom element,
+jobs bg color - second bottom element,
+membership bg color - main element
+footer - top element
+*/
+
 .bg-primary-color {
 	background-color: $Curious-Blue;
 }
-//event card bg color
+
+/* event card bg color - first bottom element,
+jobs bg color - first bottom element,
+*/
+.bg-primary-color-light {
+	background-color: $Curious-Blue_Washed;
+}
+
+/*event card bg color - main element
+jobs bg color - main element
+*/
 .bg-secondary-color {
 	background-color: $Cornflower-Blue;
 }
-//training bg color
+//training bg color - main element
+
 .bg-tertiary-color {
 	background-color: $Royal-Blue;
 }
-//jobs bg color
-.bg-secondary-color {
-	background-color: $Cornflower-Blue;
-}
-//membership bg color
-.bg-primary-color {
-	background-color: $Curious-Blue;
+
+//training bg color - second bottom element
+.quaternary-color {
+	background-color: $Indigo;
 }
 
-//footer top element bg color
-.bg-primary-color {
-	background-color: $Curious-Blue;
+//training bg colors - first bottom element
+.quaternary-color-light {
+	background-color: $Indigo-washed;
 }
 
-.nav-link {
-	font-family: $main-font;
-	font-weight: $font-semi-bold;
+.quinary-color {
+	background-color: $Biloba-Flower;
+}
+
+.quinary-color-light {
+	background-color: $Biloba-Flower_Washed;
 }
 
 .footer-links {
 	color: $font-primary-color;
 }
+
+//typography
 
 .main-headline {
 	font-weight: $font-bold;
@@ -233,8 +237,8 @@ body,
 	color: $font-secondary-color;
 }
 
-.card-title {
-	font-family: $main-font;
+.nav-link {
+	font-weight: $font-semi-bold;
 }
 
 .card-text,
@@ -247,7 +251,11 @@ body,
 .members-headline,
 .main-headline,
 .event-headline h2,
-.training-headline {
+.training-headline,
+.card-title,
+.nav-link,
+.button,
+.button-alt {
 	font-family: $main-font;
 }
 
@@ -277,11 +285,6 @@ body,
 }
 
 //headers styles
-
-.navbar,
-.header {
-	background-color: $white;
-}
 
 .header {
 	height: 150px;
@@ -380,7 +383,6 @@ body,
 	z-index: -1;
 	position: absolute;
 	top: 740px;
-	background-color: $Cornflower-Blue;
 	@include for-size(tablet) {
 		top: 690px;
 	}
@@ -397,7 +399,6 @@ body,
 	z-index: -1;
 	position: absolute;
 	top: 760px;
-	background-color: $Biloba-Flower;
 	@include for-size(tablet) {
 		top: 710px;
 	}
@@ -471,12 +472,10 @@ body,
 .background-el-full-bot-el-one {
 	margin-top: -20px;
 	height: 20px;
-	background-color: $Curious-Blue_Washed;
 	z-index: 1;
 }
 .background-el-full-bot-el-two {
 	height: 20px;
-	background-color: $Curious-Blue;
 	z-index: 1;
 	@include for-size(tablet) {
 		margin-bottom: 200px;
@@ -574,12 +573,10 @@ body,
 .background-el-three-fourths-screen-left-bot-el-one {
 	margin-top: -20px;
 	height: 20px;
-	background-color: $Cornflower-Blue;
 }
 
 .background-el-three-fourths-screen-left-bot-el-two {
 	height: 20px;
-	background-color: $Biloba-Flower;
 }
 
 //Training/Jobs section
@@ -620,43 +617,46 @@ body,
 }
 
 .training-img {
-	background-image: url('../images/members-photo-60.jpg');
+	background-image: url('../images/training-img.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 380px;
-	height: 400px;
+	width: 420px;
+	height: 420px;
 	z-index: 5;
 	position: absolute;
-	top: 400px;
+	top: 420px;
 	@include for-size(tablet_lg) {
-		top: 40px;
+		width: 460px;
+		height: 460px;
+		top: 20px;
 	}
 	@include for-size(desktop) {
 		top: -30px;
-		left: 40px;
-		height: 560px;
-		width: 500px;
+		left: 80px;
+		height: 600px;
+		width: 560px;
 	}
 	@include for-size(desktop_lg) {
+		left: 140px;
 		height: 620px;
 		width: 560px;
 	}
 }
 
 .jobs-img {
-	background-image: url('../images/members-photo-60.jpg');
+	background-image: url('../images/jobs-img-2.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 380px;
-	height: 400px;
+	height: 380px;
 	z-index: 5;
 	position: absolute;
-	top: 400px;
+	top: 420px;
 	@include for-size(tablet_lg) {
 		top: 40px;
 		right: 0px;
-		width: 350px;
-		height: 400px;
+		width: 375px;
+		height: 440px;
 	}
 	@include for-size(desktop) {
 		top: -30px;
@@ -665,13 +665,15 @@ body,
 		width: 500px;
 	}
 	@include for-size(desktop_lg) {
-		height: 620px;
-		width: 560px;
+		top: -10px;
+		right: 100px;
+		height: 580px;
+		width: 500px;
 	}
 }
 
 .background-el-small {
-	height: 860px;
+	height: 880px;
 	@include for-size(tablet_lg) {
 		height: 480px;
 	}
@@ -683,12 +685,10 @@ body,
 .background-el-small-bot-el-one {
 	margin-top: -20px;
 	height: 20px;
-	background-color: $Cornflower-Blue;
 }
 
 .background-el-small-bot-el-two {
 	height: 20px;
-	background-color: $Biloba-Flower;
 }
 
 // footer
