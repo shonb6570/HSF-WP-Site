@@ -147,7 +147,57 @@ body,
 	background-color: $Curious-Blue;
 }
 
+.button-alt {
+	display: inline-block;
+	padding: 0.35em 1.2em;
+	border: 4px solid $white;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 0.12em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: $main-font;
+	font-weight: $font-medium;
+	color: $font-primary-color;
+	text-align: center;
+	transition: all 0.2s;
+}
+.button-alt:hover {
+	background-color: $white;
+	color: $font-secondary-color;
+	font-weight: $font-bold;
+}
+
+.top-border {
+	border-top: 8px solid $Cello;
+}
+
 //typography
+
+//hero banner bg color
+.bg-primary-color {
+	background-color: $Curious-Blue;
+}
+//event card bg color
+.bg-secondary-color {
+	background-color: $Cornflower-Blue;
+}
+//training bg color
+.bg-tertiary-color {
+	background-color: $Royal-Blue;
+}
+//jobs bg color
+.bg-secondary-color {
+	background-color: $Cornflower-Blue;
+}
+//membership bg color
+.bg-primary-color {
+	background-color: $Curious-Blue;
+}
+
+//footer top element bg color
+.bg-primary-color {
+	background-color: $Curious-Blue;
+}
 
 .nav-link {
 	font-family: $main-font;
@@ -173,7 +223,7 @@ body,
 		font-size: 1.8rem;
 	}
 	@include for-size(desktop_xlg) {
-		font-size: 2rem;
+		font-size: 2.1rem;
 	}
 }
 
@@ -189,7 +239,8 @@ body,
 
 .card-text,
 .footer-info,
-.footer-links {
+.footer-links,
+.copy {
 	font-family: $secondary-font;
 }
 
@@ -197,8 +248,15 @@ body,
 .main-headline,
 .event-headline h2,
 .training-headline {
-	color: $font-primary-color;
 	font-family: $main-font;
+}
+
+.members-headline,
+.main-headline,
+.event-headline h2,
+.training-headline,
+.copy {
+	color: $font-primary-color;
 }
 
 .members-headline,
@@ -207,9 +265,14 @@ body,
 	font-size: 2.2rem;
 }
 
+.copy {
+	font-size: 1.6rem;
+	font-weight: $font-light;
+}
+
 .members-headline,
-.training-headline,
-.event-headline h2 {
+.event-headline h2,
+.training-headline {
 	font-weight: $font-regular;
 }
 
@@ -298,7 +361,6 @@ body,
 	position: absolute;
 	left: 0;
 	top: 0px;
-	background-color: $Curious-Blue;
 	@include for-size(tablet) {
 		height: 710px;
 	}
@@ -367,13 +429,10 @@ body,
 }
 .event-headline h2 {
 	border-left: 4px solid $Biloba-Flower;
-	padding-left: 10px;
+	padding-left: 20px;
 	margin-top: 20px;
 	@include for-size(tablet_lg) {
 		min-width: auto;
-		border-right: 4px solid $Biloba-Flower;
-		border-left: none;
-		padding-left: 0px;
 		padding-right: 10px;
 	}
 }
@@ -402,10 +461,11 @@ body,
 
 .background-el-full {
 	height: 100%;
-	border-top: 8px solid $Cello;
-	background-color: $Cornflower-Blue;
 	z-index: 1;
 	padding-bottom: 80px;
+	@include for-size(tablet_lg) {
+		height: 600px;
+	}
 }
 
 .background-el-full-bot-el-one {
@@ -418,6 +478,9 @@ body,
 	height: 20px;
 	background-color: $Curious-Blue;
 	z-index: 1;
+	@include for-size(tablet) {
+		margin-bottom: 200px;
+	}
 }
 
 // jobs and training section
@@ -429,9 +492,21 @@ body,
 	margin-bottom: 400px;
 }
 
+.members-icon {
+	height: 150px;
+	z-index: 3;
+}
+.members-icon-container {
+	z-index: 3;
+	margin-top: -50px;
+}
+
 .members-headline-container {
-	margin-top: 60px;
+	margin-top: 20px;
 	z-index: 2;
+	@include for-size(desktop_xlg) {
+		max-width: 500px;
+	}
 }
 
 .members-headline {
@@ -449,31 +524,32 @@ body,
 	width: 380px;
 	height: 400px;
 	left: 55px;
-	top: 270px;
+	top: 400px;
 	@include for-size(tablet) {
 		width: 440px;
 		height: 480px;
-		top: 260px;
+		top: 400px;
+		left: 85px;
 	}
 	@include for-size(tablet_lg) {
 		height: 520px;
 		width: 400px;
-		left: 2%;
-		top: 20px;
+		left: 8%;
+		top: 120px;
 	}
 	@include for-size(desktop) {
 		height: 580px;
 		width: 500px;
 		left: 10%;
-		top: -60px;
+		top: -30px;
 	}
 	@include for-size(desktop_lg) {
 		left: 15%;
 		height: 620px;
 		width: 540px;
 	}
-	@include for-size(desktop_xxlg) {
-		left: 20%;
+	@include for-size(desktop_xlg) {
+		left: 28%;
 		height: 620px;
 		width: 540px;
 	}
@@ -485,15 +561,13 @@ body,
 }
 
 .background-el-three-fourths-screen-left {
-	border-top: 8px solid $Cello;
-	height: 700px;
-	background-color: $Curious-Blue;
+	height: 860px;
 	position: relative;
 	@include for-size(tablet) {
 		height: 640px;
 	}
 	@include for-size(tablet_lg) {
-		height: 420px;
+		height: 550px;
 	}
 }
 
@@ -508,7 +582,114 @@ body,
 	background-color: $Biloba-Flower;
 }
 
-//advertisement section
+//Training/Jobs section
+
+.training-section {
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+.training-container {
+	position: relative;
+	margin-bottom: 200px;
+}
+
+.training-icon,
+.jobs-icon {
+	height: 150px;
+	z-index: 3;
+}
+.training-icon-container,
+.jobs-icon-container {
+	z-index: 3;
+	margin-top: -50px;
+}
+
+.training-headline-container {
+	margin-top: 20px;
+	z-index: 2;
+	@include for-size(desktop_xlg) {
+		max-width: 500px;
+	}
+}
+
+.training-headline {
+	border-left: 4px solid $Biloba-Flower;
+	font-size: 2rem;
+	padding-left: 10px;
+}
+
+.training-img {
+	background-image: url('../images/members-photo-60.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 380px;
+	height: 400px;
+	z-index: 5;
+	position: absolute;
+	top: 400px;
+	@include for-size(tablet_lg) {
+		top: 40px;
+	}
+	@include for-size(desktop) {
+		top: -30px;
+		left: 40px;
+		height: 560px;
+		width: 500px;
+	}
+	@include for-size(desktop_lg) {
+		height: 620px;
+		width: 560px;
+	}
+}
+
+.jobs-img {
+	background-image: url('../images/members-photo-60.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 380px;
+	height: 400px;
+	z-index: 5;
+	position: absolute;
+	top: 400px;
+	@include for-size(tablet_lg) {
+		top: 40px;
+		right: 0px;
+		width: 350px;
+		height: 400px;
+	}
+	@include for-size(desktop) {
+		top: -30px;
+		right: 40px;
+		height: 560px;
+		width: 500px;
+	}
+	@include for-size(desktop_lg) {
+		height: 620px;
+		width: 560px;
+	}
+}
+
+.background-el-small {
+	height: 860px;
+	@include for-size(tablet_lg) {
+		height: 480px;
+	}
+	@include for-size(desktop_lg) {
+		margin-top: 40px;
+	}
+}
+
+.background-el-small-bot-el-one {
+	margin-top: -20px;
+	height: 20px;
+	background-color: $Cornflower-Blue;
+}
+
+.background-el-small-bot-el-two {
+	height: 20px;
+	background-color: $Biloba-Flower;
+}
 
 // footer
 
@@ -535,7 +716,6 @@ body,
 }
 
 .footer-top-el {
-	background-color: $Curious-Blue;
 	height: 100%;
 	padding-top: 110px;
 	color: $font-primary-color;

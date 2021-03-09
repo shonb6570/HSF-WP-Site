@@ -61,6 +61,55 @@ body,
   background-color: #2182bf;
 }
 
+.button-alt {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 4px solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.button-alt:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.top-border {
+  border-top: 8px solid #344d5e;
+}
+
+.bg-primary-color {
+  background-color: #2182bf;
+}
+
+.bg-secondary-color {
+  background-color: #6b87f6;
+}
+
+.bg-tertiary-color {
+  background-color: #4f60e5;
+}
+
+.bg-secondary-color {
+  background-color: #6b87f6;
+}
+
+.bg-primary-color {
+  background-color: #2182bf;
+}
+
+.bg-primary-color {
+  background-color: #2182bf;
+}
+
 .nav-link {
   font-family: "Fira Code", monospace;
   font-weight: 600;
@@ -91,7 +140,7 @@ body,
 }
 @media (min-width: 1400px) {
   .main-headline {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -107,7 +156,8 @@ body,
 
 .card-text,
 .footer-info,
-.footer-links {
+.footer-links,
+.copy {
   font-family: "Heebo", sans-serif;
 }
 
@@ -115,8 +165,15 @@ body,
 .main-headline,
 .event-headline h2,
 .training-headline {
-  color: #ffffff;
   font-family: "Fira Code", monospace;
+}
+
+.members-headline,
+.main-headline,
+.event-headline h2,
+.training-headline,
+.copy {
+  color: #ffffff;
 }
 
 .members-headline,
@@ -125,9 +182,14 @@ body,
   font-size: 2.2rem;
 }
 
+.copy {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
 .members-headline,
-.training-headline,
-.event-headline h2 {
+.event-headline h2,
+.training-headline {
   font-weight: 400;
 }
 
@@ -228,7 +290,6 @@ body,
   position: absolute;
   left: 0;
   top: 0px;
-  background-color: #2182bf;
 }
 @media (min-width: 576px) {
   .background-el-three-fourths-screen {
@@ -317,15 +378,12 @@ body,
 
 .event-headline h2 {
   border-left: 4px solid #a792ff;
-  padding-left: 10px;
+  padding-left: 20px;
   margin-top: 20px;
 }
 @media (min-width: 768px) {
   .event-headline h2 {
     min-width: auto;
-    border-right: 4px solid #a792ff;
-    border-left: none;
-    padding-left: 0px;
     padding-right: 10px;
   }
 }
@@ -362,10 +420,13 @@ body,
 
 .background-el-full {
   height: 100%;
-  border-top: 8px solid #344d5e;
-  background-color: #6b87f6;
   z-index: 1;
   padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .background-el-full {
+    height: 600px;
+  }
 }
 
 .background-el-full-bot-el-one {
@@ -380,15 +441,35 @@ body,
   background-color: #2182bf;
   z-index: 1;
 }
+@media (min-width: 576px) {
+  .background-el-full-bot-el-two {
+    margin-bottom: 200px;
+  }
+}
 
 .members-section {
   margin-top: 200px;
   margin-bottom: 400px;
 }
 
+.members-icon {
+  height: 150px;
+  z-index: 3;
+}
+
+.members-icon-container {
+  z-index: 3;
+  margin-top: -50px;
+}
+
 .members-headline-container {
-  margin-top: 60px;
+  margin-top: 20px;
   z-index: 2;
+}
+@media (min-width: 1400px) {
+  .members-headline-container {
+    max-width: 500px;
+  }
 }
 
 .members-headline {
@@ -406,21 +487,22 @@ body,
   width: 380px;
   height: 400px;
   left: 55px;
-  top: 270px;
+  top: 400px;
 }
 @media (min-width: 576px) {
   .membership-img {
     width: 440px;
     height: 480px;
-    top: 260px;
+    top: 400px;
+    left: 85px;
   }
 }
 @media (min-width: 768px) {
   .membership-img {
     height: 520px;
     width: 400px;
-    left: 2%;
-    top: 20px;
+    left: 8%;
+    top: 120px;
   }
 }
 @media (min-width: 992px) {
@@ -428,7 +510,7 @@ body,
     height: 580px;
     width: 500px;
     left: 10%;
-    top: -60px;
+    top: -30px;
   }
 }
 @media (min-width: 1200px) {
@@ -438,9 +520,9 @@ body,
     width: 540px;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1400px) {
   .membership-img {
-    left: 20%;
+    left: 28%;
     height: 620px;
     width: 540px;
   }
@@ -454,9 +536,7 @@ body,
 }
 
 .background-el-three-fourths-screen-left {
-  border-top: 8px solid #344d5e;
-  height: 700px;
-  background-color: #2182bf;
+  height: 860px;
   position: relative;
 }
 @media (min-width: 576px) {
@@ -466,7 +546,7 @@ body,
 }
 @media (min-width: 768px) {
   .background-el-three-fourths-screen-left {
-    height: 420px;
+    height: 550px;
   }
 }
 
@@ -477,6 +557,132 @@ body,
 }
 
 .background-el-three-fourths-screen-left-bot-el-two {
+  height: 20px;
+  background-color: #a792ff;
+}
+
+.training-section {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.training-container {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.training-icon,
+.jobs-icon {
+  height: 150px;
+  z-index: 3;
+}
+
+.training-icon-container,
+.jobs-icon-container {
+  z-index: 3;
+  margin-top: -50px;
+}
+
+.training-headline-container {
+  margin-top: 20px;
+  z-index: 2;
+}
+@media (min-width: 1400px) {
+  .training-headline-container {
+    max-width: 500px;
+  }
+}
+
+.training-headline {
+  border-left: 4px solid #a792ff;
+  font-size: 2rem;
+  padding-left: 10px;
+}
+
+.training-img {
+  background-image: url("../images/members-photo-60.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 380px;
+  height: 400px;
+  z-index: 5;
+  position: absolute;
+  top: 400px;
+}
+@media (min-width: 768px) {
+  .training-img {
+    top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .training-img {
+    top: -30px;
+    left: 40px;
+    height: 560px;
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .training-img {
+    height: 620px;
+    width: 560px;
+  }
+}
+
+.jobs-img {
+  background-image: url("../images/members-photo-60.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 380px;
+  height: 400px;
+  z-index: 5;
+  position: absolute;
+  top: 400px;
+}
+@media (min-width: 768px) {
+  .jobs-img {
+    top: 40px;
+    right: 0px;
+    width: 350px;
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .jobs-img {
+    top: -30px;
+    right: 40px;
+    height: 560px;
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .jobs-img {
+    height: 620px;
+    width: 560px;
+  }
+}
+
+.background-el-small {
+  height: 860px;
+}
+@media (min-width: 768px) {
+  .background-el-small {
+    height: 480px;
+  }
+}
+@media (min-width: 1200px) {
+  .background-el-small {
+    margin-top: 40px;
+  }
+}
+
+.background-el-small-bot-el-one {
+  margin-top: -20px;
+  height: 20px;
+  background-color: #6b87f6;
+}
+
+.background-el-small-bot-el-two {
   height: 20px;
   background-color: #a792ff;
 }
@@ -503,7 +709,6 @@ body,
 }
 
 .footer-top-el {
-  background-color: #2182bf;
   height: 100%;
   padding-top: 110px;
   color: #ffffff;
