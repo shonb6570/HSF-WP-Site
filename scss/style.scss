@@ -102,6 +102,33 @@ $font-medium: 500;
 $font-semi-bold: 600;
 $font-bold: 700;
 
+/* ============================================= */
+/*         Animations                            */
+/* ============================================= */
+
+@keyframes bounce-in {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	40% {
+		transform: translateY(-30px);
+		opacity: 1;
+	}
+	60% {
+		transform: translateY(15px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.bounceIn {
+	opacity: 0;
+}
+
 //base styles
 
 html,
