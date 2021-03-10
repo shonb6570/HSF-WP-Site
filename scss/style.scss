@@ -233,7 +233,8 @@ jobs bg color - main element
 
 .nav-link,
 .card-text,
-.featured-member-text {
+.featured-member-text,
+.featured-copy {
 	color: $font-secondary-color;
 }
 
@@ -244,7 +245,11 @@ jobs bg color - main element
 .card-text,
 .footer-info,
 .footer-links,
-.copy {
+.copy,
+.classified-headline,
+.featured-headline,
+.featured-copy,
+.featured-link {
 	font-family: $secondary-font;
 }
 
@@ -255,7 +260,9 @@ jobs bg color - main element
 .card-title,
 .nav-link,
 .button,
-.button-alt {
+.button-alt,
+.classified-headline,
+.featured-headline {
 	font-family: $main-font;
 }
 
@@ -284,6 +291,16 @@ jobs bg color - main element
 	font-weight: $font-regular;
 }
 
+.classified-headline,
+.featured-headline {
+	font-weight: $font-regular;
+	font-size: 1.2rem;
+}
+
+.featured-link {
+	color: $Curious-Blue;
+}
+
 //headers styles
 
 .header {
@@ -292,9 +309,22 @@ jobs bg color - main element
 	box-shadow: 0 2px $Very-Light-Grey;
 }
 
-.logo {
+.navbar {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+#logo {
 	height: 120px;
-	margin-top: 10px;
+	width: 120px;
+	background-image: url('../images/HSF_Logo_Light.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include for-size(desktop_xlg) {
+		background-image: url('../images/HSF_Logo_Full.png');
+		height: 100px;
+		width: 420px;
+	}
 }
 
 .nav-link:last-of-type {
@@ -412,6 +442,13 @@ jobs bg color - main element
 
 // card styles
 
+.event-section {
+	margin-top: 200px;
+	@include for-size(tablet) {
+		margin-top: 0px;
+	}
+}
+
 .event-icon {
 	height: 150px;
 	z-index: 3;
@@ -444,7 +481,6 @@ jobs bg color - main element
 }
 
 .card {
-	min-width: 350px;
 	margin-top: 60px;
 	@include for-size(tablet) {
 		min-width: 300px;
@@ -488,7 +524,7 @@ jobs bg color - main element
 
 .members-section {
 	margin-top: 200px;
-	margin-bottom: 400px;
+	margin-bottom: 200px;
 }
 
 .members-icon {
@@ -520,10 +556,10 @@ jobs bg color - main element
 	background-size: contain;
 	position: absolute;
 	z-index: 1;
-	width: 380px;
+	width: 300px;
 	height: 400px;
-	left: 55px;
-	top: 400px;
+	left: 20px;
+	top: 440px;
 	@include for-size(tablet) {
 		width: 440px;
 		height: 480px;
@@ -620,11 +656,11 @@ jobs bg color - main element
 	background-image: url('../images/training-img.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 420px;
-	height: 420px;
+	width: 300px;
+	height: 400px;
 	z-index: 5;
 	position: absolute;
-	top: 420px;
+	top: 440px;
 	@include for-size(tablet_lg) {
 		width: 460px;
 		height: 460px;
@@ -647,11 +683,11 @@ jobs bg color - main element
 	background-image: url('../images/jobs-img-2.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 380px;
-	height: 380px;
+	width: 300px;
+	height: 340px;
 	z-index: 5;
 	position: absolute;
-	top: 420px;
+	top: 440px;
 	@include for-size(tablet_lg) {
 		top: 40px;
 		right: 0px;
@@ -689,6 +725,30 @@ jobs bg color - main element
 
 .background-el-small-bot-el-two {
 	height: 20px;
+}
+
+// advert section
+
+.advertisement-section {
+	margin-bottom: 400px;
+	@include for-size(tablet) {
+		margin-top: 400px;
+	}
+	@include for-size(desktop_lg) {
+		margin-top: 0px;
+	}
+}
+
+.classifieds-img,
+.featured-img {
+	min-height: 250px;
+}
+
+.classifieds-container,
+.featured-container {
+	@include for-size(desktop) {
+		height: 300px;
+	}
 }
 
 // footer

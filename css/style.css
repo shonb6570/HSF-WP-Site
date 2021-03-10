@@ -157,7 +157,8 @@ jobs bg color - main element
 
 .nav-link,
 .card-text,
-.featured-member-text {
+.featured-member-text,
+.featured-copy {
   color: #1a1a1a;
 }
 
@@ -168,7 +169,11 @@ jobs bg color - main element
 .card-text,
 .footer-info,
 .footer-links,
-.copy {
+.copy,
+.classified-headline,
+.featured-headline,
+.featured-copy,
+.featured-link {
   font-family: "Heebo", sans-serif;
 }
 
@@ -179,7 +184,9 @@ jobs bg color - main element
 .card-title,
 .nav-link,
 .button,
-.button-alt {
+.button-alt,
+.classified-headline,
+.featured-headline {
   font-family: "Fira Code", monospace;
 }
 
@@ -208,15 +215,40 @@ jobs bg color - main element
   font-weight: 400;
 }
 
+.classified-headline,
+.featured-headline {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.featured-link {
+  color: #2182bf;
+}
+
 .header {
   height: 150px;
   padding: 0;
   box-shadow: 0 2px #cccccc;
 }
 
-.logo {
+.navbar {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#logo {
   height: 120px;
-  margin-top: 10px;
+  width: 120px;
+  background-image: url("../images/HSF_Logo_Light.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 1400px) {
+  #logo {
+    background-image: url("../images/HSF_Logo_Full.png");
+    height: 100px;
+    width: 420px;
+  }
 }
 
 .nav-link:last-of-type {
@@ -364,6 +396,15 @@ jobs bg color - main element
   }
 }
 
+.event-section {
+  margin-top: 200px;
+}
+@media (min-width: 576px) {
+  .event-section {
+    margin-top: 0px;
+  }
+}
+
 .event-icon {
   height: 150px;
   z-index: 3;
@@ -402,7 +443,6 @@ jobs bg color - main element
 }
 
 .card {
-  min-width: 350px;
   margin-top: 60px;
 }
 @media (min-width: 576px) {
@@ -455,7 +495,7 @@ jobs bg color - main element
 
 .members-section {
   margin-top: 200px;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
 
 .members-icon {
@@ -490,10 +530,10 @@ jobs bg color - main element
   background-size: contain;
   position: absolute;
   z-index: 1;
-  width: 380px;
+  width: 300px;
   height: 400px;
-  left: 55px;
-  top: 400px;
+  left: 20px;
+  top: 440px;
 }
 @media (min-width: 576px) {
   .membership-img {
@@ -607,11 +647,11 @@ jobs bg color - main element
   background-image: url("../images/training-img.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 420px;
-  height: 420px;
+  width: 300px;
+  height: 400px;
   z-index: 5;
   position: absolute;
-  top: 420px;
+  top: 440px;
 }
 @media (min-width: 768px) {
   .training-img {
@@ -640,11 +680,11 @@ jobs bg color - main element
   background-image: url("../images/jobs-img-2.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 340px;
   z-index: 5;
   position: absolute;
-  top: 420px;
+  top: 440px;
 }
 @media (min-width: 768px) {
   .jobs-img {
@@ -692,6 +732,32 @@ jobs bg color - main element
 
 .background-el-small-bot-el-two {
   height: 20px;
+}
+
+.advertisement-section {
+  margin-bottom: 400px;
+}
+@media (min-width: 576px) {
+  .advertisement-section {
+    margin-top: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .advertisement-section {
+    margin-top: 0px;
+  }
+}
+
+.classifieds-img,
+.featured-img {
+  min-height: 250px;
+}
+
+@media (min-width: 992px) {
+  .classifieds-container,
+.featured-container {
+    height: 300px;
+  }
 }
 
 .footer-border-space {
