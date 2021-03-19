@@ -48,10 +48,19 @@
     opacity: 1;
   }
 }
-.bounceIn {
+.bounceIn,
+.fade {
   opacity: 0;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html,
 body {
   background-color: #f8f9fa;

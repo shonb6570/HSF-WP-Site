@@ -49,3 +49,23 @@ const bounceIn = document.querySelectorAll('.bounceIn');
 bounceIn.forEach (animationElement => {
     observer.observe(animationElement);
 });
+
+
+
+const fadeIn = document.querySelectorAll('.fade');
+
+    observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+        if(entry.intersectionRatio > 0) {
+            entry.target.style.animation = `fade-in 1.3s ${entry.target.dataset.delay} forwards ease`;
+        } else {
+            entry.target.style.animation = "none";
+        }
+    })
+
+});
+
+fadeIn.forEach (animationElement => {
+    observer.observe(animationElement);
+});
